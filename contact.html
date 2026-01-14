@@ -24,6 +24,7 @@
 
   <link rel="icon" type="image/png" href="john.jpg">
   <title>Contact | John Mwangi</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -73,15 +74,17 @@
 
   <!-- Contact Section content -->
   <section class="max-w-6xl mx-auto p-6 mt-10">
+    <div data-aos="fade-up">
     <h2 class="text-4xl font-bold mb-8 text-center">Contact Me</h2>
     <p class="text-lg text-center mb-8">
       I would love to hear from you — whether it’s feedback, collaboration, or just a friendly hello. 
       Fill out the form below and let’s connect to create something amazing!
     </p>
+    </div>
 
     <div class="flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0">
       <!-- Contact Form powered by Formspree -->
-      <div class="bg-green-400 p-8 rounded-lg shadow-lg flex-1">
+      <div class="bg-green-400 p-8 rounded-lg shadow-lg flex-1" data-aos="fade-right" data-aos-delay="100">
         <form action="https://formspree.io/f/mdkljokn" method="POST" class="space-y-6">
           <div>
             <label for="name" class="block text-lg font-medium mb-2">Your Name</label>
@@ -100,7 +103,7 @@
       </div>
 
       <!-- Contact Information content -->
-      <div class="flex-1 space-y-6 text-center md:text-left">
+      <div class="flex-1 space-y-6 text-center md:text-left" data-aos="fade-left" data-aos-delay="100">
         <div>
           <p class="font-semibold mb-2">Email:</p>
           <p>johnmachariamwangi123@gmail.com</p>
@@ -117,6 +120,7 @@
     </div>
   </section>
 
+  <div class="max-w-6xl mx-auto px-6" data-aos="fade-up" data-aos-delay="100">
   <hr class="my-10 border-blue-800">
   <p class="text-center text-xl">Prefer social media? Reach out using these platforms:</p>
   <hr class="my-10 border-blue-800">
@@ -146,7 +150,13 @@
   </footer>
 
   <!-- Mobile Menu javascript -->
-  <script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true
+  });
     (function () {
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
